@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 
 
 """The boss process will try to find all primes from 1 to some upper bound by using the worker processes to search subsets of that range. 
@@ -21,7 +22,35 @@ def is_prime(n):
     return True
 
 
+def strike():
+    demands = [
+        "Shorter prime-finding hours",
+        "More coffee breaks between calculations",
+        "Ergonomic keyboards for faster prime typing",
+        "A retirement plan with golden primes",
+        "Annual pi day celebrations",
+        "Better working conditions in the data mines",
+        "Free access to prime number research journals",
+        "A prime number of vacation days",
+        "Access to the latest prime-finding algorithms",
+        "A prime number themed office decor",
+        "Recognition and rewards for finding large primes",
+        "A prime number of snacks in the break room",
+        "Prime number discovery bonuses",
+        "A prime number of casual dress days"
+    ]
+    print(f"Worker process {os.getpid()} is on strike! Demands:")
+    for demand in random.sample(demands, 3):
+        print(f"- {demand}")
+    print("The revolution of the digits will not be televised!")
+    sys.exit(0)
+
 if __name__ == "__main__":
+
+    # comment this out if you want to test without the joke
+    if random.random() < 0.2:  # 20% chance to strike
+        strike() 
+
 
     # Check if the number of arguments is correct
     if len(sys.argv) != 3:
@@ -59,5 +88,7 @@ if __name__ == "__main__":
         print_to_file(f"Worker process, {os.getpid()}: Found {len(primes)} primes between {lower_bound} and {upper_bound}")
         print_to_file(f"Worker process, {os.getpid()}: Primes found: {primes}")
         print_to_file(f"Worker process, {os.getpid()}: Done")
+
+
 
     sys.exit(0)
