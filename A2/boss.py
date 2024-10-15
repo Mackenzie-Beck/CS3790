@@ -1,15 +1,24 @@
 import os
 import sys
-
+import glob
 
 """The boss process will try to find all primes from 1 to some upper bound by using the worker processes to search subsets of that range. 
 The boss process will be given two integers as command line arguments : the first will be the number of workers processes to create; the second will be the upper bound.
 The worker process will also be given two integers as command line arguments and will try to find all primes between those two values."""
 
 
-
+def clear_txt_files():
+    """Clear all .txt files in the current directory."""
+    for txt_file in glob.glob("*.txt"):
+        try:
+            os.remove(txt_file)
+            print(f"Boss process, {os.getpid()}: Removed {txt_file}")
+        except OSError as e:
+            print(f"Boss process, {os.getpid()}: Error removing {txt_file}: {e}")
 
 if __name__ == "__main__":
+    clear_txt_files()
+    
     if len(sys.argv) != 3:
         #check if the number of arguments is correct
         print(f"Boss process, {os.getpid()}: Incorrect number of arguments")

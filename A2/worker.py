@@ -37,7 +37,7 @@ def strike():
         "Recognition and rewards for finding large primes",
         "A prime number of snacks in the break room",
         "Prime number discovery bonuses",
-        "A prime number of casual dress days"
+        "A prime number of casual dress days",
     ]
     print(f"Worker process {os.getpid()} is on strike! Demands:")
     for demand in random.sample(demands, 3):
