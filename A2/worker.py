@@ -48,7 +48,7 @@ def strike():
 if __name__ == "__main__":
 
     # comment this out if you want to test without the joke
-    if random.random() < 0.2:  # 20% chance to strike
+    if random.random() < 0.3:  # 30% chance to strike
         strike() 
 
 

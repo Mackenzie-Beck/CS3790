@@ -25,3 +25,7 @@ This project consists of a boss process and multiple worker processes to find al
 ## Usage
 To run the boss process, use the following command:
 python boss.py <number_of_workers> <upper_bound>
+
+To run the worker process, use the following command:
+python worker.py <subrange_start> <subrange_end>
+
