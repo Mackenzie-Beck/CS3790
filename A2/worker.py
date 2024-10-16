@@ -48,8 +48,8 @@ def strike():
 if __name__ == "__main__":
 
     # comment this out if you want to test without the joke
-    if random.random() < 0.3:  # 30% chance to strike
-        strike() 
+   # if random.random() < 0.3:  # 30% chance to strike
+   #     strike() 
 
 
     # Check if the number of arguments is correct
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     try:
         lower_bound = int(sys.argv[1])
         upper_bound = int(sys.argv[2])
-        if lower_bound <= 0 or upper_bound <= 0:
+        if lower_bound < 0 or upper_bound < 0:
             raise ValueError
     except ValueError:
         print(f" Worker process, {os.getpid()}: Invalid arguments")

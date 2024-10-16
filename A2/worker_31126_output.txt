@@ -1,0 +1,4 @@
+Worker process, 31126: Starting to find primes between 8 and 10
+Worker process, 31126: Found 0 primes between 8 and 10
+Worker process, 31126: Primes found: []
+Worker process, 31126: Done

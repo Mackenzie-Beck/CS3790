@@ -1,0 +1,4 @@
+Worker process, 31131: Starting to find primes between 18 and 25
+Worker process, 31131: Found 2 primes between 18 and 25
+Worker process, 31131: Primes found: [19, 23]
+Worker process, 31131: Done

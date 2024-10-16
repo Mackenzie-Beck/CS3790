@@ -1,0 +1,4 @@
+Worker process, 31128: Starting to find primes between 12 and 14
+Worker process, 31128: Found 1 primes between 12 and 14
+Worker process, 31128: Primes found: [13]
+Worker process, 31128: Done

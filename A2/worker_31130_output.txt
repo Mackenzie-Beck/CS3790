@@ -1,0 +1,4 @@
+Worker process, 31130: Starting to find primes between 16 and 18
+Worker process, 31130: Found 1 primes between 16 and 18
+Worker process, 31130: Primes found: [17]
+Worker process, 31130: Done

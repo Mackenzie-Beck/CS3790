@@ -43,7 +43,8 @@ if __name__ == "__main__":
             worker_script = "worker.py"
             worker_lower_bound = i * (upper_bound // num_workers)
             worker_upper_bound = (i + 1) * (upper_bound // num_workers)
-
+            if i == num_workers - 1:
+                worker_upper_bound = upper_bound
 
             """use sys.executable to get the path to the Python interpreter and pass the worker script and arguments to it
             first arguement is the path to the interpreter

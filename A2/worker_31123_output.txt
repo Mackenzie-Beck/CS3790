@@ -1,0 +1,4 @@
+Worker process, 31123: Starting to find primes between 2 and 4
+Worker process, 31123: Found 2 primes between 2 and 4
+Worker process, 31123: Primes found: [2, 3]
+Worker process, 31123: Done
