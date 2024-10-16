@@ -28,6 +28,8 @@ if __name__ == "__main__":
     try:
         num_workers = int(sys.argv[1])
         upper_bound = int(sys.argv[2])
+        if num_workers <= 0 or upper_bound <= 0:
+            raise ValueError
     except ValueError:
         print(f"Boss process, {os.getpid()}: Invalid arguments")
         sys.exit(1)
