@@ -4,9 +4,11 @@ This project consists of a server and a client that communicate through a named 
 
 ## Files
 
-- `server.py`: Contains the server code that listens for requests, computes prime numbers in the given range, and sends the response back to the client.
+- `server.py`: Contains the server code that listens for requests, computes prime numbers in the given range, and writes the response to the named pipe.
 - `client.py`: Contains the client code that sends a range request to the server and receives the list of prime numbers in that range.
 - `server_test.py`: Contains the unit tests for the server code.
+
+
 ## How to Run
 
 ### Server
@@ -24,6 +26,13 @@ This project consists of a server and a client that communicate through a named 
     python client.py
     ```
    The client will prompt you to enter the lower and upper bounds of the range. It will then send the request to the server and print the list of prime numbers in that range.
+
+    The server will accept requests from any process that has access to the named pipe and follows the correct format.
+
+    Format of the request:
+    ```
+    RANGE <lower> <upper>
+    ```
 
 ## Example
 
