@@ -19,6 +19,13 @@ This project consists of a server and a client that communicate through a named 
     ```
    The server will create a named pipe at `/tmp/pipe` and start listening for requests.
 
+    The server will accept requests from any process that has access to the named pipe and follows the correct format.
+
+    Format of the request:
+    ```
+    RANGE <lower> <upper>
+    ```
+
 ### Client
 
 1. Run the client script:
@@ -27,12 +34,6 @@ This project consists of a server and a client that communicate through a named 
     ```
    The client will prompt you to enter the lower and upper bounds of the range. It will then send the request to the server and print the list of prime numbers in that range.
 
-    The server will accept requests from any process that has access to the named pipe and follows the correct format.
-
-    Format of the request:
-    ```
-    RANGE <lower> <upper>
-    ```
 
 ## Example
 
