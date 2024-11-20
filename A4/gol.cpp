@@ -6,6 +6,10 @@ using namespace std;
 // Class representing the Game of Life
 class GameOfLife {
 public:
+
+    int rows, cols; // Dimensions of the grid
+    vector<vector<int>> grid; // 2D grid representing the game state
+
     // Constructor to initialize the game with given rows and columns
     GameOfLife(int rows, int cols) : rows(rows), cols(cols) {
         grid.resize(rows, vector<int>(cols, 0)); // Initialize the grid with zeros
@@ -51,9 +55,30 @@ public:
         }
     }
 
-public:
-    int rows, cols; // Dimensions of the grid
-    vector<vector<int>> grid; // 2D grid representing the game state
+
+    void computeSubRegion(int start_row, int end_row, int start_col, int end_col, vector<vector<int>>& nextGrid) {
+        for (int i = start_row; i <= end_row; ++i) {
+            for (int j = start_col; j <= end_col; ++j) {
+                int liveNeighbors = countLiveNeighbors(i, j); // Count living neighbors
+
+                // Apply the rules of the Game of Life
+                if (grid[i][j] == 1) { // If the cell is alive
+                    if (liveNeighbors < 2 || liveNeighbors > 3) {
+                        nextGrid[i][j] = 0; // Cell dies due to underpopulation or overpopulation
+                    } else {
+                        nextGrid[i][j] = 1; // Cell stays alive
+                    }
+                } else { // If the cell is dead
+                    if (liveNeighbors == 3) {
+                        nextGrid[i][j] = 1; // Cell becomes alive due to reproduction
+                    } else {
+                        nextGrid[i][j] = 0; // Cell stays dead
+                    }
+                }
+            }
+        }
+    }
+
 
     // Count the number of live neighbors for a given cell
     int countLiveNeighbors(int row, int col) const {
