@@ -1,0 +1,4 @@
+Worker process, 19720: Starting to find primes between 270 and 300
+Worker process, 19720: Found 5 primes between 270 and 300
+Worker process, 19720: Primes found: [271, 277, 281, 283, 293]
+Worker process, 19720: Done

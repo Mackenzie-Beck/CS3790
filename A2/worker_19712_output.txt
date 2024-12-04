@@ -1,0 +1,4 @@
+Worker process, 19712: Starting to find primes between 30 and 60
+Worker process, 19712: Found 7 primes between 30 and 60
+Worker process, 19712: Primes found: [31, 37, 41, 43, 47, 53, 59]
+Worker process, 19712: Done

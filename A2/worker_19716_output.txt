@@ -1,0 +1,4 @@
+Worker process, 19716: Starting to find primes between 150 and 180
+Worker process, 19716: Found 6 primes between 150 and 180
+Worker process, 19716: Primes found: [151, 157, 163, 167, 173, 179]
+Worker process, 19716: Done

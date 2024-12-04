@@ -1,4 +1,4 @@
-#include "bankersAlg.cpp"
+#include "bankersAlg.hpp"
 #include <cassert>
 
 void testSafetyAlgorithm() {

@@ -27,14 +27,14 @@ int main(int argc, char* argv[]) {
 
     // Uncomment one of the following initial states to use it, some will not work if the board_size is too small
 
-    // Glider
-    // if (board_size >= 3) {
-    //     initialState[0][1] = 1;
-    //     initialState[1][2] = 1;
-    //     initialState[2][0] = 1;
-    //     initialState[2][1] = 1;
-    //     initialState[2][2] = 1;
-    // }
+    //Glider
+    if (board_size >= 3) {
+        initialState[0][1] = 1;
+        initialState[1][2] = 1;
+        initialState[2][0] = 1;
+        initialState[2][1] = 1;
+        initialState[2][2] = 1;
+    }
 
     //Small Exploder
     // if (board_size >= 3) {
@@ -69,17 +69,17 @@ int main(int argc, char* argv[]) {
     // }
 
     // Lightweight Spaceship
-if (board_size >= 5) {
-    initialState[6][0] = 1;
-    initialState[6][3] = 1;
-    initialState[7][4] = 1;
-    initialState[8][0] = 1;
-    initialState[8][4] = 1;
-    initialState[9][1] = 1;
-    initialState[9][2] = 1;
-    initialState[9][3] = 1;
-    initialState[9][4] = 1;
-}
+// if (board_size >= 5) {
+//     initialState[6][0] = 1;
+//     initialState[6][3] = 1;
+//     initialState[7][4] = 1;
+//     initialState[8][0] = 1;
+//     initialState[8][4] = 1;
+//     initialState[9][1] = 1;
+//     initialState[9][2] = 1;
+//     initialState[9][3] = 1;
+//     initialState[9][4] = 1;
+// }
 
 
 

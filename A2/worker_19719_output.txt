@@ -1,0 +1,4 @@
+Worker process, 19719: Starting to find primes between 240 and 270
+Worker process, 19719: Found 5 primes between 240 and 270
+Worker process, 19719: Primes found: [241, 251, 257, 263, 269]
+Worker process, 19719: Done

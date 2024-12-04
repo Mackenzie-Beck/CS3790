@@ -1,0 +1,4 @@
+Worker process, 19715: Starting to find primes between 120 and 150
+Worker process, 19715: Found 5 primes between 120 and 150
+Worker process, 19715: Primes found: [127, 131, 137, 139, 149]
+Worker process, 19715: Done

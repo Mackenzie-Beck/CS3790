@@ -1,0 +1,4 @@
+Worker process, 19713: Starting to find primes between 60 and 90
+Worker process, 19713: Found 7 primes between 60 and 90
+Worker process, 19713: Primes found: [61, 67, 71, 73, 79, 83, 89]
+Worker process, 19713: Done
