@@ -108,10 +108,16 @@ bool safetyAlgorithm(
     matrix tmpNEED = NEED;
     matrix tmpALLOCATION = ALLOCATION;
 
-    for (size_t i = 0; i < tmpNEED.size(); i++) {
-        if (tmpNEED[i] <= WORK && finish[i] == false) {
-            WORK = WORK + tmpALLOCATION[i];
-            finish[i] = true;
+    // Check if there are any processes that can be finished
+    bool found = true;
+    while (found) {
+        found = false;
+        for (size_t i = 0; i < tmpNEED.size(); i++) {
+            if (tmpNEED[i] <= WORK && finish[i] == false) {
+                WORK = WORK + tmpALLOCATION[i];
+                finish[i] = true;
+                found = true;
+            }
         }
     }
 
